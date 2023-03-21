@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/ruby:0-3.1-bullseye
 
 # Dev Container のイメージでは、使用したいバージョンの Ruby が
 # インストールされたものがなかったため、ここでインストールしています
-RUN rvm install "ruby-3.2.0"
+RUN /usr/local/rvm/bin/rvm install ruby-3.2.0
 
 # Install Rails
 RUN gem install rails webdrivers 
